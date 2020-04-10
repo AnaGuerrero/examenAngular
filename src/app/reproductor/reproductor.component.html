@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Esta es tu música, {{userName}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false" 
+                muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="pageSizeOptions" 
+                [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>
+        </div>
+    </div>
+</div>

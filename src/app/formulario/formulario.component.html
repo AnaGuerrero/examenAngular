@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-1">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" novalidate>
+        <div class="row">
+            <h2>Registrate para continuar!</h2>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Nombre de usuario" formControlName="userName" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Nombre completo" formControlName="name" required> 
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Biografía" formControlName="biography" required></textarea>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button mat-button type="submit">Registrarme!</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4 offset-md-1">
+      <div class="row">
+        <h5>Esta es tu ubicación</h5>
+      </div>
+        <agm-map
+        [latitude]="latitude"
+        [longitude]="longitude"
+        [zoom]="zoom">
+        <agm-marker
+          [latitude]="latitude"
+          [longitude]="longitude"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>
